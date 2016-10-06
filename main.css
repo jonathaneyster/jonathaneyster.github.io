@@ -1,0 +1,87 @@
+@font-face { 
+  font-family: 'ostrich-sans';
+  src: url('ostrich-sans/ostrich-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.openAV
+{
+  font-family: ostrich-sans;
+  -webkit-font-smoothing: antialiased;
+  text-align: right; 
+  position: fixed; 
+  top: 25%; 
+  bottom: 75%; 
+  width: 100%;
+  right: 18%; 
+  text-shadow: 3px 2px #1a1a1a; 
+}
+.openDev
+{
+  font-family: ostrich-sans;
+  -webkit-font-smoothing: antialiased;
+  position: fixed; 
+  top: 25%; 
+  bottom: 75%; 
+  width: 100%;
+  left: 18%;
+  text-shadow: 3px 2px #1a1a1a; 
+}
+
+.openAV a, a:visited
+{
+  color:#ffffff; 
+  text-decoration: none;
+}
+.openDev a, a:visited
+{
+  color:#ffffff; 
+  text-decoration: none;
+}
+
+.bgv_0
+{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.bgv_1
+{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+
+#github
+{
+
+    position: fixed;
+    bottom: 0%;
+    left: 42.5%;
+    color: #ffffff;
+    opacity: .54;
+    text-shadow: 3px 2px #1a1a1a; 
+}
+
+#linkedin
+{
+    position: fixed;
+    bottom: 0%;
+    right: 42.5%;
+    color: #ffffff;
+    opacity: .54;
+    text-shadow: 3px 2px #1a1a1a; 
+}
+
+
