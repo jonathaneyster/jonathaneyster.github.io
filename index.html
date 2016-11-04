@@ -19,22 +19,53 @@
 
 	<span style="opacity: .75">
 		<p class="openAV" style="color:#ffffff; font-size:55px">
-			<a href="startbootstrap-grayscale-gh-pages/portfolio.html">Development</a> 
+			<a class="link" href="startbootstrap-grayscale-gh-pages/portfolio.html">Development</a> 
 		</p>
 	</span>
 
+	<!--startbootstrap-grayscale-gh-pages/portfolio.html-->
+
 	<span style="opacity: .75">
 		<p class="openDev" style="color:#ffffff; font-size:55px">
-			<a href="">audio/video</a> 
+			<a class="link" href="">audio/video</a> 
 		</p>
 	</span>		
 	<div>
-		<a href="https://github.com/jonathaneyster" target="blank"><i id="github" class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+		<a href="https://github.com/jonathaneyster" target="blank"><i id="github" class="fa fa-github-square fa-3x link" aria-hidden="true"></i></a>
 
-		<a href="https://www.linkedin.com/in/joanthan-eyster-7673a412a?trk=nav_responsive_tab_profile_pic" target="blank"><i id="linkedin" class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>		
+		<a href="https://www.linkedin.com/in/joanthan-eyster-7673a412a?trk=nav_responsive_tab_profile_pic" target="blank"><i id="linkedin" class="fa fa-linkedin-square fa-3x link" aria-hidden="true"></i></a>		
 	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
 
+			$('body').css('display', 'none');
+
+			$('body').fadeIn(2000);
+
+
+
+			$('.link').click(function(event) {
+
+			event.preventDefault();
+
+			newLocation = this.href;
+
+			$('body').fadeOut(1000, newpage);
+
+			});
+
+
+
+function newpage() {
+
+window.location = newLocation;
+
+}
+
+});
+	</script>
 </body>
 
 </html>

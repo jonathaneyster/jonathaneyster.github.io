@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html style="background-color:#000000">
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="portfolio.css">
+	 <link rel="stylesheet" type="text/css" href=https://fonts.googleapis.com/css?family=Roboto:mono>
+	<title>development</title>
+</head>
+<body>
+<br>
+<div>
+<pre style="text-align:left font-family: roboto-mono text-indent: 5%" id="typewriter">
+<span class="var-highlight">public class</span> developer {
+
+    <span class="var-highlight">String</span> name = <span class="string-highlight">"Jonathan Eyster"</span>;
+    <span class="var-highlight">String</span> location = <span class="string-highlight">"Noblesville, IN"</span>;
+    <span class="var-highlight">String</span>[] properties ={<span class="string-highlight">"Java", "HTML", "CSS"</span>};
+ } 
+ </pre>
+</div>
+<div>
+	<div class="skw-pages">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Skewed One Page Scroll</h2>
+          <p class="skw-page__description">Just scroll down</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 2</h2>
+          <p class="skw-page__description">Nothing to do here, continue scrolling.</p>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-3">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 3</h2>
+          <p class="skw-page__description">The end is near, I promise!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-4">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Page 4</h2>
+          <p class="skw-page__description">Ok, ok, just one more scroll!</p>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-5">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Epic finale</h2>
+          <p class="skw-page__description">
+            Feel free to check 
+            <a class="skw-page__link" href="http://codepen.io/suez/pens/public/" target="_blank">my other pens</a> and follow me on 
+            <a class="skw-page__link" href="https://twitter.com/NikolayTalanov" target="_blank">Twitter</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+</div> 
+<script>
+		function setupTypewriter(t) {
+	    var HTML = t.innerHTML;
+
+	    t.innerHTML = "";
+
+	    var cursorPosition = 0,
+	        tag = "",
+	        writingTag = false,
+	        tagOpen = false,
+	        typeSpeed = 100,
+        tempTypeSpeed = 0;
+
+	    var type = function() {
+        
+	        if (writingTag === true) {
+	            tag += HTML[cursorPosition];
+	        }
+
+	        if (HTML[cursorPosition] === "<") {
+	            tempTypeSpeed = 0;
+	            if (tagOpen) {
+	                tagOpen = false;
+	                writingTag = true;
+	            } else {
+	                tag = "";
+	                tagOpen = true;
+	                writingTag = true;
+	                tag += HTML[cursorPosition];
+	            }
+	        }
+	        if (!writingTag && tagOpen) {
+	            tag.innerHTML += HTML[cursorPosition];
+	        }
+	        if (!writingTag && !tagOpen) {
+	            if (HTML[cursorPosition] === " ") {
+	                tempTypeSpeed = 0;
+	            }
+	            else {
+	                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            }
+	            t.innerHTML += HTML[cursorPosition];
+	        }
+	        if (writingTag === true && HTML[cursorPosition] === ">") {
+	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            writingTag = false;
+	            if (tagOpen) {
+	                var newSpan = document.createElement("span");
+	                t.appendChild(newSpan);
+	                newSpan.innerHTML = tag;
+	                tag = newSpan.firstChild;
+	            }
+	        }
+
+	        cursorPosition += 1;
+	        if (cursorPosition < HTML.length - 1) {
+	            setTimeout(type, tempTypeSpeed);
+	        }
+
+	    };
+
+	    return {
+	        type: type
+	    };
+	}
+
+	var typer = document.getElementById('typewriter');
+
+	typewriter = setupTypewriter(typewriter);
+
+	typewriter.type();
+
+$(document).ready(function() {
+
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
+
+});	
+</script>
+</body>
+</html>
