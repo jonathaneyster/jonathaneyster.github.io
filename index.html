@@ -6,9 +6,15 @@
 <head>
 	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<title>jonathaneyster</title>
 </head>
 <body>
+<div class="container">
+
+
 
 	<div class="bgv_0">
     	<video loop muted autoplay class="bgv_1">
@@ -16,7 +22,12 @@
         
     	</video>
 	</div>
-
+	<div style="text-align:left">
+	<p>fill whitespace?</p>
+</div>
+<div style="text-align:right">
+	<p>fill whitespace?</p>
+</div>
 	<span style="opacity: .75">
 		<p class="openAV" style="color:#ffffff; font-size:55px">
 			<a class="link" href="startbootstrap-grayscale-gh-pages/portfolio.html">Development</a> 
@@ -27,16 +38,16 @@
 
 	<span style="opacity: .75">
 		<p class="openDev" style="color:#ffffff; font-size:55px">
-			<a class="link" href="">audio/video</a> 
+			<a class="link" data-toggle="tooltip" data-placement="bottom" title="lmao doesnt work" href="">audio/video</a> 
 		</p>
 	</span>		
-	<div>
+	<span>
 		<a href="https://github.com/jonathaneyster" target="blank"><i id="github" class="fa fa-github-square fa-3x link" aria-hidden="true"></i></a>
 
-		<a href="https://www.linkedin.com/in/joanthan-eyster-7673a412a?trk=nav_responsive_tab_profile_pic" target="blank"><i id="linkedin" class="fa fa-linkedin-square fa-3x link" aria-hidden="true"></i></a>		
-	</div>
+		<a href="https://www.linkedin.com/in/joanthan-eyster-7673a412a?trk=nav_responsive_tab_profile_pic" id="linkedin" class="fa fa-linkedin-square fa-3x link" aria-hidden="true"></i></a>		
+	</span>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
 	<script>
 		$(document).ready(function() {
 
@@ -54,6 +65,7 @@
 
 			$('body').fadeOut(1000, newpage);
 
+
 			});
 
 
@@ -62,10 +74,71 @@ function newpage() {
 
 window.location = newLocation;
 
+
 }
 
 });
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});	
+
+$.fn.extend({
+	treeview:	function() {
+		return this.each(function() {
+			// Initialize the top levels;
+			var tree = $(this);
+			
+			tree.addClass('treeview-tree');
+			tree.find('li').each(function() {
+				var stick = $(this);
+			});
+			tree.find('li').has("ul").each(function () {
+				var branch = $(this); //li with children ul
+				
+				branch.prepend("<i class='tree-indicator glyphicon glyphicon-chevron-right'></i>");
+				branch.addClass('tree-branch');
+				branch.on('click', function (e) {
+					if (this == e.target) {
+						var icon = $(this).children('i:first');
+						
+						icon.toggleClass("glyphicon-chevron-down glyphicon-chevron-right");
+						$(this).children().children().toggle();
+					}
+				})
+				branch.children().children().toggle();
+				
+				/**
+				 *	The following snippet of code enables the treeview to
+				 *	function when a button, indicator or anchor is clicked.
+				 *
+				 *	It also prevents the default function of an anchor and
+				 *	a button from firing.
+				 */
+				branch.children('.tree-indicator, button, a').click(function(e) {
+					branch.click();
+					
+					e.preventDefault();
+				});
+			});
+		});
+	}
+});
+
+/**
+ *	The following snippet of code automatically converst
+ *	any '.treeview' DOM elements into a treeview component.
+ */
+$(window).on('load', function () {
+	$('.treeview').each(function () {
+		var tree = $(this);
+		tree.treeview();
+	})
+})
+
 	</script>
 </body>
+<footer>
+</footer>
 
 </html>
