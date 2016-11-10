@@ -47,6 +47,12 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+      
+}
+.tileimage
+{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);  
 }
 .tiles .tile {
   display: inline-block;
@@ -131,15 +137,19 @@
           transition-delay: 0.25s;
 }
 
-#gavin
+.projecttext
 {
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
+  font-family: Helvetica,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 2px;
+  font-size: 19px;
+  padding: 0px, 0px, 20px, 20px;
+  color: #555;
+  letter-spacing: 2px;
+  border-bottom: 2.5px solid #555;
+  
 }
-
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
