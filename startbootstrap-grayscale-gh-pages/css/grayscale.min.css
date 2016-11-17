@@ -273,7 +273,7 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 
 
 #form {
-  position: relative;
+  position: fixed;
   width: 500px;
   margin: auto auto auto auto;
 }
