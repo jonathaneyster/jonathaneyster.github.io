@@ -53,6 +53,10 @@
 {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);  
+      background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .tiles .tile {
   display: inline-block;
@@ -63,6 +67,10 @@
   position: relative;
   border-radius: 3px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+      background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .tiles .tile:before {
   content: '';
