@@ -30,19 +30,18 @@ html
      height: 100%;   
  }
 
- .sc
+ .sc 
 {
 
-  -webkit-font-smoothing: antialiased;
-  text-align: left; 
-  position: fixed; 
-  
- font-size: 30px;
-  
-  left:33%; 
-  font-family: Helvetica,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 200;
-  letter-spacing: 30px;
+  color:#ffffff; 
+  text-decoration: none;
+
+}
+ .back
+{
+
+  color:#ffffff; 
+  text-decoration: none;
 
 }
 
@@ -63,6 +62,11 @@ a:hover:after {
   left: 0; 
 }
 .sc a, a:visited
+{
+  color:#ffffff; 
+  text-decoration: none;
+}
+.back a, a:visited
 {
   color:#ffffff; 
   text-decoration: none;
