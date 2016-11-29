@@ -9,7 +9,7 @@
 html
 {
   background: url(startbootstrap-grayscale-gh-pages/img/jon2.png) no-repeat;
-  
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,23 +33,33 @@ html
   font-family: Helvetica,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 200;
   letter-spacing: 30px;
-  border-bottom: 1px solid rgba(192, 192, 192, 0);
-    -webkit-transition: border 500ms ease;
-  -moz-transition: border 500ms ease;
-  -ms-transition: border 500ms ease;
-  -o-transition: border 500ms ease;
-  transition: border 500ms ease; 
+
 }
 
-.openAV:hover
+a
 {
-    border-bottom: 1px solid rgba(192, 192, 192, 1);
+    display: inline-block;
+  padding: 15px 20px;
+  position: relative;
 }
 
-.openDev:hover
-{
-  border-bottom: 1px solid rgba(192, 192, 192, 1);
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
 
 .openDev
 {
@@ -63,12 +73,8 @@ html
   font-family: Helvetica,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 200;
   letter-spacing: 30px;
-  border-bottom: 1px solid rgba(192, 192, 192, 0);
-    -webkit-transition: border 500ms ease;
-  -moz-transition: border 500ms ease;
-  -ms-transition: border 500ms ease;
-  -o-transition: border 500ms ease;
-  transition: border 500ms ease; 
+
+
  
 }
 
@@ -82,6 +88,8 @@ html
   color:#ffffff; 
   text-decoration: none;
 }
+
+
 
 /*.bgv_0
 {

@@ -4,6 +4,7 @@
 <html>
 
 <head>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -19,29 +20,33 @@
     	</video>
 -->
 
-<div class="container">
 
 
-		<p class="openAV" style="color:#ffffff; font-size:24px">
-			<a class="link" href="https://jonathaneyster.github.io/startbootstrap-grayscale-gh-pages/portfolio.html">development</a> 
+
+		<p class="openAV" id="fadeout2" style="color:#ffffff; font-size:24px">
+			<a class="link openAV"  style="color:#ffffff; font-size:24px" href="https://jonathaneyster.github.io/startbootstrap-grayscale-gh-pages/portfolio.html"> development</a> 
 		</p>
 
-		<p class="openDev" style="color:#ffffff; font-size:24px">
-			<a class="link" href="">audio/video</a> 
+		<p class="openDev" id="fadeout" style="color:#ffffff; font-size:24px">
+			<a class="link" href="#"> audio/video</a> 
 		</p>
 
 
-
+<!--<div><a href="#" id="btn">Show bank div and hide fancy div</a></div>
+<div id="btn-bk"><a href="#">back</a></div>
+<div id="bank">Bank Div</div>
+<div id="fancy">Fancy Div</div>
+-->
 	
-	<script>
-		$(document).ready(function() {
-			$('body').css('display', 'none');
-			$('body').fadeIn(2000);
-			$('.link').click(function(event) {
-			event.preventDefault();
-			newLocation = this.href;
-			$('body').fadeOut(1000, newpage);
-			});
+	<script type="text/javascript">
+
+
+
+/*$('#fadeout').click(function(e){    
+    $('#fadeout #fadeout2').fadeOut('slow', function(){
+        $('#fancy, #btn').fadeIn('slow');
+    });
+});*/
 
 
 	</script>
