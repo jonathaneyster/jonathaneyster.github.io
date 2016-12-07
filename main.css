@@ -41,6 +41,20 @@ html
 
 }
 
+.name
+{
+  font-family: Malgun Gothic,sans-serif;
+    text-align: right; 
+  position: fixed; 
+  
+  bottom: 85%; 
+    font-weight: 200;
+  letter-spacing: 20px;
+  left: 37%; 
+  opacity: .7;
+
+}
+
 a
 {
     display: inline-block;
@@ -64,8 +78,22 @@ a:hover:after {
   width: 100%; 
   left: 0; 
 }
+.fadeout2 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.fadeout {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
 
-
+.fadeout3 {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
 .openDev
 {
   -webkit-font-smoothing: antialiased;
